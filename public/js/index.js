@@ -2,11 +2,6 @@
 
   socket.on('connect', function () {
     console.log('Connected to server')
-
-    socket.emit('createMessage' ,{
-      from: 'pedro@example.com',
-      text: 'First Socket.io'
-    });
   });
 
   socket.on('disconnect', function () {
@@ -14,7 +9,7 @@
   });
 
   socket.on('newMessage', function (message) {
-    console.log('New message', message);
+    console.log('newMessage: ', message);
   });
 
   socket.on()
